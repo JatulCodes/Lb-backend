@@ -3,6 +3,9 @@ const router = express.Router();
 const api4Question = require("../../api/question/index");
 const { validate } = require("../../middlewares");
 const passport = require("passport");
+// const {upVoteQuestion,downVoteQuestion} = require("../../api/question/VoteQuestions")
+// const upVoteQuestion = require("../../api/question/VoteQuestions")
+
 
 // GET Method
 router.get(
@@ -44,6 +47,23 @@ router.post(
   passport.authenticate(["jwt"], { session: false }),
   api4Question.acceptReportedQuestion.handler
 );
+// ===============
+router.put(
+  "/upVote-question/:id",
+  passport.authenticate(["jwt"], { session: false }),
+  api4Question.upVoteQuestion.handler
+);
+router.put(
+  "/downVote-question/:id",
+  passport.authenticate(["jwt"], { session: false }),
+  api4Question.downVoteQuestion.handler
+);
+// router.get(
+//   "/ratings",
+//   passport.authenticate(["jwt"], { session: false }),
+//   downVoteQuestion()
+// );
+// ++++++++++++++++++++
 
 // PUT Method
 router.put(

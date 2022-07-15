@@ -12,6 +12,9 @@ const declineRequest = require("./decline-abuse-request");
 const searchQuestion = require("./get-search-api");
 const getQuestionAdmin = require("./get-question-admin");
 const acceptReportedQuestion = require("./accept-reported-question")
+const upVoteQuestion= require("./VoteQuestions")
+const downVoteQuestion= require("./VoteQuestions")
+
 
 module.exports = exports = {
   createQuestion,
@@ -27,5 +30,7 @@ module.exports = exports = {
   declineRequest,
   searchQuestion,
   getQuestionAdmin,
-  acceptReportedQuestion
+  acceptReportedQuestion,
+  upVoteQuestion,
+  downVoteQuestion
 };

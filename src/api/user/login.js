@@ -145,7 +145,7 @@ module.exports = exports = {
                     token: jwt.sign(data4token, jwtOptions.secretOrKey),
                   },
                   logPayload: false,
-                  status: enums.HTTP_CODES.OK,
+                  status: enums.HTTP_CODES.OK,deviceToken:deviceToken
                 };
                 return res
                   .status(enums.HTTP_CODES.OK)

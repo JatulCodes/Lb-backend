@@ -9,9 +9,7 @@ module.exports = exports = {
   handler: async (req, res) => {
     const { user } = req;
     const { questionId } = req.params;
-    const questionExists = await global.models.GLOBAL.QUESTION.findById(
-      questionId
-    );
+    const questionExists = await global.models.GLOBAL.QUESTION.findById(questionId);
     if (!questionExists) {
       const data4createResponseObject = {
         req: req,

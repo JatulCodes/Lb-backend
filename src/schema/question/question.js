@@ -25,6 +25,11 @@ module.exports = (connection) => {
     response: { type: Number, default: 0 },
     status: { type: String, default: "active" },
     reportAbuse: { type: Boolean, default: false },
+    upVoteQuestion : {type:String, default:0, ref:"question" },
+    downVoteQuestion : {type:String, default:0, ref:"question" },
+    // rating : {type:String, default:0, ref:"question" }
+
+
   });
   return connection.model("question", questionSchema, "question");
 };

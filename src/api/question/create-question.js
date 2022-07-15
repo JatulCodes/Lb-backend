@@ -18,8 +18,7 @@ module.exports = exports = {
 
   handler: async (req, res) => {
     const { user } = req;
-    const { question, displayProfile, allowConnectionRequest, filter } =
-      req.body;
+    const { question, displayProfile, allowConnectionRequest, filter } = req.body;
     if (!question) {
       const data4createResponseObject = {
         req: req,
